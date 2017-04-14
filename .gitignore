@@ -1,5 +1,6 @@
 *.css
 *.sqlite
+!GTFS.sqlite
 
 #
 # Node
