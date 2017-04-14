@@ -18,6 +18,7 @@
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2",
     "sqlite": "^2.5.0",
+    "sqlite3": "^3.1.8",
     "stylus": "0.54.5"
   },
   "devDependencies": {
