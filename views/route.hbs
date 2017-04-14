@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+
+<p>
+  <a href="/">Back</a>
+</p>
+
+<div>
+  {{#each data as |trips headSign|}}
+    <h3>{{headSign}}</h3>
+    <table class="table table-condensed table-striped table-bordered table-hover">
+      <tr>
+        <th>Trip ID</th>
+        {{#each trips.0.times}}
+          <th>{{this.stop_name}}</th>
+        {{/each}}
+      </tr>
+      {{#each trips}}
+        <tr>
+          <th>{{this.trip_id}}</th>
+          {{#each this.times}}
+            <td>{{this.departure_time}}</td>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </table>
+  {{/each}}
+</div>

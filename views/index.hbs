@@ -1,2 +1,10 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+<h4>Routes</h4>
+{{#each routes}}
+  <h3>
+    <a href="/route/{{this.route_id}}">
+      {{this.route_short_name}} - {{this.route_long_name}}
+    </a>
+  </h3>
+{{/each}}
