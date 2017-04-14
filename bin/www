@@ -7,6 +7,7 @@
 const app = require('../app')
 const debug = require('debug')('mooveserver:server')
 const http = require('http')
+const path = require('path')
 const db = require('sqlite')
 
 /**
@@ -27,7 +28,7 @@ const server = http.createServer(app)
  */
 
 Promise.resolve()
-  .then(() => db.open('./GTFS.sqlite', { Promise }))
+  .then(() => db.open(path.join(__dirname, '../GTFS.sqlite'), { Promise }))
   .then(() => server.listen(port))
   .catch(err => console.error(err.stack))
 server.on('error', onError)
